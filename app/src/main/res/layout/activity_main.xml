@@ -101,60 +101,69 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/ears"
-            android:onClick="toggleShow"/>
+            android:onClick="showEars"/>
 
         <CheckBox
             android:id="@+id/eyes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/eyes" />
+            android:text="@string/eyes"
+            android:onClick="showEyes"/>
 
         <CheckBox
             android:id="@+id/arms"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/arms" />
+            android:text="@string/arms"
+            android:onClick="showArms"/>
 
         <CheckBox
             android:id="@+id/eyebrows"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/eyebrows" />
+            android:text="@string/eyebrows"
+            android:onClick="showEyebrows"/>
 
         <CheckBox
             android:id="@+id/glasses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/glasses" />
+            android:text="@string/glasses"
+            android:onClick="showGlasses"/>
 
         <CheckBox
             android:id="@+id/hat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hat" />
+            android:text="@string/hat"
+            android:onClick="showHat"/>
 
         <CheckBox
             android:id="@+id/nose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nose" />
+            android:text="@string/nose"
+            android:onClick="showNose"/>
 
         <CheckBox
             android:id="@+id/mustache"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/mustache" />
+            android:text="@string/mustache"
+            android:onClick="showMustache"/>
 
         <CheckBox
-            android:id="@+id/checkBox26"
+            android:id="@+id/shoes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shoes" />
+            android:text="@string/shoes"
+            android:onClick="showShoes"/>
 
         <CheckBox
             android:id="@+id/mouth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/mouth" />
+            android:text="@string/mouth"
+            android:onClick="showMouth"/>
     </GridLayout>
 </LinearLayout>
