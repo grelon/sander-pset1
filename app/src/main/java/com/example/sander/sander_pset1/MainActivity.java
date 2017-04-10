@@ -6,9 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
-import static android.R.attr.id;
-import static com.example.sander.sander_pset1.R.id.arms;
-
 public class MainActivity extends AppCompatActivity {
 
     // initialize ImageViews
@@ -23,6 +20,19 @@ public class MainActivity extends AppCompatActivity {
     ImageView mustache;
     ImageView nose;
     ImageView shoes;
+
+    // initialize keynames for visibility states
+    private Integer visArms = null;
+//    private String visBody = "";
+//    private String visEars = "";
+//    private String visEyebrows = "";
+//    private String visEyes = "";
+//    private String visGlasses = "";
+//    private String visHat = "";
+//    private String visMouth = "";
+//    private String visMustache = "";
+//    private String visNose = "";
+//    private String visShoes = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +50,33 @@ public class MainActivity extends AppCompatActivity {
         mustache = (ImageView) findViewById(R.id.img_mustache);
         nose = (ImageView) findViewById(R.id.img_nose);
         shoes = (ImageView) findViewById(R.id.img_shoes);
+
+        if (savedInstanceState != null) {
+            Log.d("entered", "saved InstanceState");
+            if (savedInstanceState.getInt("visArms") == View.VISIBLE) {
+                Log.d("entered", "saved InstanceState.getInt");
+                arms.setVisibility(View.VISIBLE);
+            }
+        }
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        // Save visibility of bodyparts
+        if (arms.getVisibility() == View.INVISIBLE) {
+            Log.d("entered", "arms.getVisibility()");
+            outState.putInt("visArms", View.INVISIBLE);
+        }
+    }
+
+    /*
+    Show functions
+     */
     public void showArms(View view) {
+        Log.d("entered", "showArms");
+
         // if visibility is VISIBLE
         if (arms.getVisibility() == View.VISIBLE) {
             // set visbility to INVISIBLE
@@ -161,13 +195,13 @@ public class MainActivity extends AppCompatActivity {
     }
     public void showShoes(View view) {
         // if visibility is VISIBLE
-        if (nose.getVisibility() == View.VISIBLE) {
+        if (shoes.getVisibility() == View.VISIBLE) {
             // set visbility to INVISIBLE
-            nose.setVisibility(View.INVISIBLE);
+            shoes.setVisibility(View.INVISIBLE);
         }
         else {
             // set visibility to VISIBLE
-            nose.setVisibility(View.VISIBLE);
+            shoes.setVisibility(View.VISIBLE);
         }
     }
 }

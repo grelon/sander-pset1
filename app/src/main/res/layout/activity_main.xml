@@ -24,6 +24,7 @@
             android:id="@+id/img_ears"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/ears" />
 
         <ImageView
@@ -36,54 +37,63 @@
             android:id="@+id/img_arms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/arms" />
 
         <ImageView
             android:id="@+id/img_eyebrows"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/eyebrows" />
 
         <ImageView
             android:id="@+id/img_eyes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/eyes" />
 
         <ImageView
             android:id="@+id/img_glasses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/glasses" />
 
         <ImageView
             android:id="@+id/img_hat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/hat" />
 
         <ImageView
             android:id="@+id/img_mouth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/mouth" />
 
         <ImageView
             android:id="@+id/img_mustache"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/mustache" />
 
         <ImageView
             android:id="@+id/img_nose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/nose" />
 
         <ImageView
             android:id="@+id/img_shoes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:srcCompat="@drawable/shoes" />
     </FrameLayout>
 
