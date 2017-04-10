@@ -21,19 +21,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView nose;
     ImageView shoes;
 
-    // initialize keynames for visibility states
-    private Integer visArms = null;
-//    private String visBody = "";
-//    private String visEars = "";
-//    private String visEyebrows = "";
-//    private String visEyes = "";
-//    private String visGlasses = "";
-//    private String visHat = "";
-//    private String visMouth = "";
-//    private String visMustache = "";
-//    private String visNose = "";
-//    private String visShoes = "";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +39,62 @@ public class MainActivity extends AppCompatActivity {
         shoes = (ImageView) findViewById(R.id.img_shoes);
 
         if (savedInstanceState != null) {
-            Log.d("entered", "saved InstanceState");
             if (savedInstanceState.getInt("visArms") == View.VISIBLE) {
-                Log.d("entered", "saved InstanceState.getInt");
                 arms.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getInt("visEars") == View.VISIBLE) {
+                ears.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getInt("visEyebrows") == View.VISIBLE) {
+                eyebrows.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getInt("visEyes") == View.VISIBLE) {
+                eyes.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getInt("visGlasses") == View.VISIBLE) {
+                glasses.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getInt("visHat") == View.VISIBLE) {
+                hat.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getInt("visMouth") == View.VISIBLE) {
+                mouth.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getInt("visMustache") == View.VISIBLE) {
+                mustache.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getInt("visNose") == View.VISIBLE) {
+                nose.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getInt("visShoes") == View.VISIBLE) {
+                shoes.setVisibility(View.VISIBLE);
             }
         }
     }
@@ -66,13 +105,48 @@ public class MainActivity extends AppCompatActivity {
 
         // Save visibility of bodyparts
         if (arms.getVisibility() == View.INVISIBLE) {
-            Log.d("entered", "arms.getVisibility()");
             outState.putInt("visArms", View.INVISIBLE);
+        }
+
+        if (ears.getVisibility() == View.INVISIBLE) {
+            outState.putInt("visEars", View.INVISIBLE);
+        }
+
+        if (eyebrows.getVisibility() == View.INVISIBLE) {
+            outState.putInt("visEyebrows", View.INVISIBLE);
+        }
+
+        if (eyes.getVisibility() == View.INVISIBLE) {
+            outState.putInt("visEyes", View.INVISIBLE);
+        }
+
+        if (glasses.getVisibility() == View.INVISIBLE) {
+            outState.putInt("visGlasses", View.INVISIBLE);
+        }
+
+        if (hat.getVisibility() == View.INVISIBLE) {
+            outState.putInt("visHat", View.INVISIBLE);
+        }
+
+        if (mouth.getVisibility() == View.INVISIBLE) {
+            outState.putInt("visMouth", View.INVISIBLE);
+        }
+
+        if (mustache.getVisibility() == View.INVISIBLE) {
+            outState.putInt("visMustache", View.INVISIBLE);
+        }
+
+        if (nose.getVisibility() == View.INVISIBLE) {
+            outState.putInt("visNose", View.INVISIBLE);
+        }
+
+        if (shoes.getVisibility() == View.INVISIBLE) {
+            outState.putInt("visShoes", View.INVISIBLE);
         }
     }
 
     /*
-    Show functions
+    onClick show functions
      */
     public void showArms(View view) {
         Log.d("entered", "showArms");
